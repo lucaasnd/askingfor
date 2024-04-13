@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Novia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            background-color: lightcoral;
+        }
+    </style>
+    <script>
+        function accionParaCuandoEllaDigaQueSi(){
+            alert('ahora ya somos novios <3');
+        }
+
+        function mueveElBoton(){
+            width = window.innerWidth;
+            height = window.innerHeight;
+
+            newWidth = (Math.random() * width);
+            newHeight = (Math.random() * height);
+
+            document.getElementById('botonNo').style.position = "absolute";
+            document.getElementById('botonNo').style.left = newWidth + "px";
+            document.getElementById('botonNo').style.top = newHeight + "px";
+            
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Queres ser mi novia?</h3>
+    <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="botonSi" value="Si" />
+    <input type="button" id="botonNo" onmouseover="mueveElBoton()" value="No" />
+</body>
+</html>
